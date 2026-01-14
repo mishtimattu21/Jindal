@@ -1,0 +1,118 @@
+================================================================================
+                    HOW TO RUN THE CSR DASHBOARD
+================================================================================
+
+IMPORTANT: This is a Streamlit application - it runs BOTH backend and frontend
+           together. You only need ONE command!
+
+================================================================================
+STEP 1: INSTALL DEPENDENCIES (First time only)
+================================================================================
+
+Open Command Prompt or PowerShell and run:
+
+    pip install -r requirements.txt
+
+This installs:
+- streamlit (web framework)
+- pandas (data processing)
+- openpyxl (Excel file reading)
+- plotly (charts and graphs)
+- numpy (numerical operations)
+
+================================================================================
+STEP 2: RUN THE APPLICATION
+================================================================================
+
+In the same directory, run:
+
+    streamlit run app.py
+
+This ONE command:
+✓ Starts the Python backend server
+✓ Launches the web frontend
+✓ Processes your Excel data
+✓ Opens the dashboard in your browser
+
+================================================================================
+STEP 3: ACCESS THE DASHBOARD
+================================================================================
+
+After running the command, you'll see:
+
+    You can now view your Streamlit app in your browser.
+    Local URL: http://localhost:8501
+    Network URL: http://192.168.x.x:8501
+
+- Your browser should open automatically
+- If not, manually visit: http://localhost:8501
+
+================================================================================
+QUICK METHODS
+================================================================================
+
+METHOD 1: Command Line (All Operating Systems)
+-----------------------------------------------
+    cd "C:\Users\Mishti mattu\Desktop\jindal"
+    streamlit run app.py
+
+METHOD 2: Batch File (Windows Only)
+------------------------------------
+    Double-click: run.bat
+
+METHOD 3: Python Module
+-----------------------
+    python -m streamlit run app.py
+
+================================================================================
+STOPPING THE APPLICATION
+================================================================================
+
+Press: Ctrl + C  in the terminal/command prompt
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Problem: Port 8501 already in use
+Solution: streamlit run app.py --server.port 8502
+
+Problem: Module not found
+Solution: pip install streamlit pandas openpyxl plotly numpy
+
+Problem: Excel files not found
+Solution: Make sure both files are in the same folder:
+         - CSR MIS.xlsx
+         - JSPL CSR Data Input.xlsx
+
+================================================================================
+WHAT HAPPENS WHEN YOU RUN?
+================================================================================
+
+1. Backend (Python):
+   - Reads Excel files using data_loader.py
+   - Processes data and calculates KPIs
+   - Generates charts and visualizations
+   - Handles form submissions
+
+2. Frontend (Web Interface):
+   - Streamlit automatically generates HTML/CSS/JavaScript
+   - Serves interactive web pages
+   - Displays charts, tables, and forms
+   - Handles user interactions
+
+3. Both work together seamlessly - no separate setup needed!
+
+================================================================================
+ARCHITECTURE SUMMARY
+================================================================================
+
+    Your Browser (Frontend)
+           ↕ HTTP
+    Streamlit Server (Backend + Frontend combined)
+           ↕
+    Excel Files (Data Source)
+
+Everything runs in ONE process - simple and efficient!
+
+================================================================================
